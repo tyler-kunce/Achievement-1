@@ -24,11 +24,12 @@ ordered structure and allows for sorting.
 
 2.	Python has a host of different data types that allow you to store and organize information. List 4 examples of data types that Python recognizes, briefly define them, and indicate whether they are scalar or non-scalar.
 
-| Data type | Definition | Scalar or Non-Scalar |
-| int | Represents integers, both negative and non-negative | Scalar |
-| bool | Stores data of two types - True or False | Scalar |
-| Tuples | Linear arrays that can store multiple values of any data type, immutable | Non-Scalar |
-| Dictionaries | Structure for storing values and objects indexed by indentifiers known as keys | Non-Scalar |
+| Data type    | Definition                                                                     | Scalar or Non-Scalar |
+| ------------ | ------------------------------------------------------------------------------ | -------------------- |
+| int          | Represents integers, both negative and non-negative                            | Scalar               |
+| bool         | Stores data of two types - True or False                                       | Scalar               |
+| Tuples       | Linear arrays that can store multiple values of any data type, immutable       | Non-Scalar           |
+| Dictionaries | Structure for storing values and objects indexed by indentifiers known as keys | Non-Scalar           |
 
 3.	A frequent question at job interviews for Python developers is: what is the difference between lists and tuples in Python? Write down how you would respond.
 
