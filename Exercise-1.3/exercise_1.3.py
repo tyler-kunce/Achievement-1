@@ -4,7 +4,7 @@ ingredients_list = []
 n = int(input('How many recipes are you entering? '))
 
 def take_recipe():
-    name = str(input('What is the name of your recipe? '))
+    name = input('What is the name of your recipe? ')
     cooking_time = int(input('How long does this take to make (in minutes)? '))
     ingredients = list(input('What do you need to make it, using a comma? ').split(', '))
     recipe = {'name': name, 'cooking_time': cooking_time, 'ingredients': ingredients}
@@ -19,13 +19,15 @@ for i in range(n):
     recipes_list.append(recipe)
 
 for recipe in recipes_list:
-    if recipe['cooking_time'] < 10 and len(recipe['ingredients']) < 4:
+    ingredient_len = len(recipe['ingredients'])
+    cooking_time = recipe['cooking_time']
+    if cooking_time < 10 and ingredient_len < 4:
         recipe['difficulty'] = 'Easy'
-    if recipe['cooking_time'] < 10 and len(recipe['ingredients']) >= 4:
+    if cooking_time < 10 and ingredient_len >= 4:
         recipe['difficulty'] = 'Medium'
-    if recipe['cooking_time'] >= 10 and len(recipe['ingredients']) < 4:
+    if cooking_time >= 10 and ingredient_len < 4:
         recipe['difficulty'] = 'Intermediate'
-    if recipe['cooking_time'] >= 10 and len(recipe['ingredients']) >= 4:
+    if cooking_time >= 10 and ingredient_len >= 4:
         recipe['difficulty'] = 'Hard'
 
 for recipe in recipes_list:
@@ -38,8 +40,8 @@ for recipe in recipes_list:
 
 def all_ingredients():
     print('Ingredients Required Across All Recipes')
-    print('---------------------------------------')
-    ingredients_list.sort()
+    print('-'*39)
+    sorted_ingredients_list = sorted(ingredients_list)
     for ingredient in ingredients_list:
         print(ingredient.capitalize())
 
