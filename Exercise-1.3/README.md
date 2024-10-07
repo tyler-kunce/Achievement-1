@@ -13,7 +13,8 @@
 - If the user’s input is one of those 3 destinations, the following statement should be printed: “Enjoy your stay in ______!”
 - If the user’s input is something other than the defined destinations, the following statement should be printed: “Oops, that destination is not currently available.”
 
-`travel_dest = input('Where would you like to travel today? ')
+```python
+travel_dest = input('Where would you like to travel today? ')
 
 if travel_dest == 'New York':
     print('Enjoy your stay in New York!')
@@ -25,7 +26,8 @@ elif travel_dest == 'Los Angeles':
     print('Enjoy your stay in Los Angeles')
 
 else
-    print('Oops, that destination is not currently available.')`
+    print('Oops, that destination is not currently available.')
+```
 
 2. Imagine you’re at a job interview for a Python developer role. The interviewer says “Explain logical operators in Python”. Draft how you would respond.
 
