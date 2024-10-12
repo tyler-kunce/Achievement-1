@@ -27,7 +27,7 @@ def calc_difficulty(cooking_time, ingredients):
         difficulty = "Intermediate"
     if cooking_time >= 10 and len(ingredients) >= 4:
         difficulty = "Hard"
-        
+
     return difficulty
 
 file_name = input("What's the name of the file you're opening? ")
@@ -36,7 +36,7 @@ try:
     recipe_file = open(file_name, "rb")
     data = pickle.load(recipe_file)
 except FileNotFoundError:
-    print("That file doesn't exist")
+    print("That file doesn't exist. Let's create one!")
     data = {"recipes_list": [], "all_ingredients": []}
 except:
     print("Oh no! Something unexpected occurred.")
