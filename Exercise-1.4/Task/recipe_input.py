@@ -1,7 +1,7 @@
 import pickle
 
 def take_recipe():
-    recipe_name = input("What\'s the recipe called? ")
+    recipe_name = input("What's the recipe called? ")
     cooking_time = int(input("How long to cook this (in minutes)? "))
     ingredients = [
         ingredient.strip()
