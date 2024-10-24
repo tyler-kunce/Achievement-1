@@ -28,14 +28,10 @@ class Recipe(object):
 
     def update_all_ingredients(self):
         for ingredient in self.ingredients:
-            if ingredient not in self.all_ingredients:
-                self.all_ingredients.add(ingredient)
+            self.all_ingredients.add(ingredient)
 
     def search_ingredient(self, ingredient):
-        if ingredient in self.ingredients:
-            return True
-        else:
-            return False
+        return ingredient in self.ingredients
 
     def calculate_difficulty(self):
         if self.cooking_time < 10 and len(self.ingredients) < 4:
@@ -54,10 +50,10 @@ class Recipe(object):
         return self.difficulty
 
     def __str__(self):
-        output = "Name: " + self.name + \
-            "\nCooking Time (in minutes): " + str(self.cooking_time) + \
-            "\nIngredients: " + str(self.ingredients) + \
-            "\nDifficulty: " + str(self.difficulty)
+        output = f'''Name: {self.name}
+            Cooking Time (in minutes): {str(self.cooking_time)}
+            Ingredients: {str(self.ingredients)}
+            Difficulty: {str(self.difficulty)}'''
         return output
     
 def recipe_search(data, search_term):
