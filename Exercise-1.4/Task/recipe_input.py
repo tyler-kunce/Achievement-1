@@ -3,10 +3,11 @@ import pickle
 def take_recipe():
     recipe_name = input("What's the recipe called? ")
     cooking_time = int(input("How long to cook this (in minutes)? "))
-    ingredients = [
-        ingredient.strip()
-        for ingredient in input("What do you need to cook it (comma-separated)? ").split(",")
-    ]
+    input_ingredients = input("What do you need to cook it (comma-separated)? ").split(",")
+    ingredients = []
+    for ingredient in input_ingredients:
+        ingredients.append(ingredient.strip())
+    
     difficulty = calc_difficulty(cooking_time, ingredients)
     
     recipe = {
@@ -31,6 +32,7 @@ def calc_difficulty(cooking_time, ingredients):
     return difficulty
 
 file_name = input("What's the name of the file you're opening? ")
+file_name += '.bin'
 
 try:
     recipe_file = open(file_name, "rb")

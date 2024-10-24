@@ -9,12 +9,9 @@ def display_recipe(recipe):
     print("Difficulty: ", recipe["difficulty"])
 
 def search_ingredient(data):
-    avail_ingredients = enumerate(data["all_ingredients"])
-    num_list = list(avail_ingredients)
-
     print("List of ingredients:")
-    for n in num_list:
-        print(n[0], n[1])
+    for index, ingredient in enumerate(data["all_ingredients"], 1):
+        print(index, ingredient)
     
     try:
         ind = int(input("Pick a number from the list of ingredients: "))
